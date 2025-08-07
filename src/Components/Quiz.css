@@ -1,7 +1,5 @@
 
-body{
-    background-color: liner-gradient(to right, #98c8f8, #6130ff);
-}
+
 .container {
     font-family: Arial, sans-serif;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.317);
@@ -17,6 +15,15 @@ body{
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: #f9f9f9;
+}
+@media (max-width: 780px) {
+    body{
+        padding: 0 5px;
+    }
+    .container {
+        padding: 10px 25px;
+        margin-top: 50px;
+    }
 }
 .container hr{
     height: 2px;
@@ -48,8 +55,23 @@ body{
         font-weight: 500;
         border-radius: 5px;
         cursor: pointer;
+        transition: background-color 0.3s ease;
     }
+.container button:hover{
+    background-color: #3a00a5;
+}
+.container button:active{
+    transform: scale(0.98);
+}
 .container .index{
     margin: auto;
     font-size: 20px;
+}
+.container .correct{
+    background-color:#74ffc7;
+    border-color: #00ad7c;
+}
+.container .wrong{
+    background-color: #ffb3b3;
+    border-color: #ff6161;
 }
