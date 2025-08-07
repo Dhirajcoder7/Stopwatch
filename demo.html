@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       <style>
+       body{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        padding:5rem;
+       }
+       .mr{
+        margin:5px
+       }
+       </style>
+    </head>
+    <body>
+    <h1>Counter function</h1>
+      <h2>Count :<span id="count">0</span> </h2>
+      <div>
+        <button class="mr" id="min">Min -1</button>
+        <button class="mr" id="Zero">0</button>
+        <button class="mr" id="add">Add +1</button>
+      </div>
+      <script>
+        let addNum = document.getElementById('add');
+        let minNum = document.getElementById('min');
+        let Zero = document.getElementById('Zero');
+        let Count = document.getElementById('count');
+
+        addNum.addEventListener('click', () => {
+            let value = parseInt(Count.innerText);
+            value += 1;
+            Count.innerText = value;
+            Count.style.color = value > 0 ? "green" : value < 0 ? "red" : "black";
+        });
+
+        minNum.addEventListener('click', () => {
+            let value = parseInt(Count.innerText);
+            value -= 1;
+            Count.innerText = value;
+            if (value < 0) {
+                Count.style.color = "red";
+
+            }
+             else if (value === 0) {
+                Count.style.color = "black";
+            } else {
+                Count.style.color = "green";
+            }
+        });
+
+        Zero.addEventListener('click', () => {
+            Count.innerText = 0;
+            Count.style.color = "black"; 
+        });
+      </script>
+    </body>
+</html>
