@@ -1,11 +1,6 @@
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
+@import "tailwindcss"; 
 
-@import "tailwindcss";
-/* body{
+body{
     background: linear-gradient(to right, #98c8f8, #6130ff);
     font-family: 'Poppins', sans-serif;
-} */
+}
