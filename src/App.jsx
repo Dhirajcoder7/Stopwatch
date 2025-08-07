@@ -6,8 +6,8 @@ const App = () => {
   return (
     <div>
       {/* <h1 className='text-4xl '>Hallo Dhiraj</h1> */}
-      <Stopwatch/>
-      {/* <QuizApp/> */}
+{/*       <Stopwatch/> */}
+      <QuizApp/>
    
     </div>
   )
